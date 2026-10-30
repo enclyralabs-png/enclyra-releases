@@ -68,8 +68,26 @@ ACT> remind me to call mom at 7 pm
 ## Install
 
 1. Download `Enclyra.dmg`, open it, drag **Enclyra** into **Applications**.
-2. **First open:** the app is not signed yet, so macOS blocks a normal double-click.
-   **Right-click Enclyra → Open → Open.** You only do this once.
+2. **First open — getting past macOS Gatekeeper.** Enclyra is not signed with a paid Apple developer certificate
+   yet (that costs $99/year — it will come), so macOS blocks it the first time. You only do this once:
+
+   **Way 1 — System Settings (macOS 15 Sequoia and later, also works on older):**
+   1. Double-click Enclyra in Applications. macOS says it can't be opened → click **Done** (not "Move to Trash").
+   2. Open **System Settings → Privacy & Security**, scroll down to **Security**.
+   3. Next to *"Enclyra" was blocked to protect your Mac*, click **Open Anyway**, enter your Mac password.
+   4. Click **Open** in the last box. From now on it opens normally.
+
+   **Way 2 — if macOS says "Enclyra is damaged and can't be opened":** it isn't damaged — that is the download
+   mark macOS puts on unsigned apps. Open **Terminal** and paste:
+   ```
+   xattr -dr com.apple.quarantine /Applications/Enclyra.app
+   ```
+   Then open Enclyra normally.
+
+   On macOS 14 and older, **right-click Enclyra → Open → Open** also works.
+
+   *Why trust it?* It only removes the block for this one app, nothing else on your Mac. If you'd rather not, wait
+   for the signed version.
 3. First launch downloads the models (a few GB — it takes a while on slow internet).
 4. Enclyra may ask to build a **speed-up cache** (actions answer about 2× faster). It runs in the background for a
    few minutes; say No if your Mac is busy — you can build it later from the **!** at the top.
