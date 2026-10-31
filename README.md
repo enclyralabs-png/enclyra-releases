@@ -88,9 +88,29 @@ ACT> remind me to call mom at 7 pm
 
    *Why trust it?* It only removes the block for this one app, nothing else on your Mac. If you'd rather not, wait
    for the signed version.
-3. First launch downloads the models (a few GB — it takes a while on slow internet).
+3. First launch downloads Ollama and the models (about 5.5 GB — see below). Keep the Mac online until it's done.
 4. Enclyra may ask to build a **speed-up cache** (actions answer about 2× faster). It runs in the background for a
    few minutes; say No if your Mac is busy — you can build it later from the **!** at the top.
+
+---
+
+## First launch — the only time it needs the internet
+
+Setup downloads everything Enclyra needs **once**. After that, it works with the Wi-Fi off.
+
+| Step | What is downloaded | Size | From |
+|---|---|---|---|
+| 1. Ollama | the free app that runs AI models on your Mac (Enclyra opens the installer, you click through it) | ~200 MB | ollama.com |
+| 2. The models | `granite3.1-moe:3b` + `granite4:micro` (they plan and do the actions), `gemma3:1b` (chat) | ~5 GB | ollama.com |
+| 3. Meaning model | `all-mpnet-base-v2` — how it understands what you mean, for search and memory | ~420 MB | huggingface.co |
+
+Only these files are downloaded — nothing about you is uploaded. If the internet drops during setup, just open
+Enclyra again and it carries on.
+
+**What "offline" means here:** the AI model runs on **your Mac's own chip**. Your chats, files, memory and
+everything you ask it are worked out on your Mac and stay there. Nothing is sent to us — or anyone — unless you
+allow it. The one thing Enclyra does on its own is **check for updates** when it starts (below), and you can turn
+that off too.
 
 ---
 
