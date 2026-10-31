@@ -101,8 +101,18 @@ Setup downloads everything Enclyra needs **once**. After that, it works with the
 | Step | What is downloaded | Size | From |
 |---|---|---|---|
 | 1. Ollama | the free app that runs AI models on your Mac (Enclyra opens the installer, you click through it) | ~200 MB | ollama.com |
-| 2. The models | `granite3.1-moe:3b` + `granite4:micro` (they plan and do the actions), `gemma3:1b` (chat) | ~5 GB | ollama.com |
+| 2. The models | depends on your Mac's RAM — Enclyra picks the package for you (table below) | ~5 GB on 8 GB | ollama.com |
 | 3. Meaning model | `all-mpnet-base-v2` — how it understands what you mean, for search and memory | ~420 MB | huggingface.co |
+
+**The models — one package per RAM size:**
+
+| Your Mac | Models it downloads |
+|---|---|
+| **8 GB** | `granite3.1-moe:3b` + `granite4:micro` (plan and do the actions), `gemma3:1b` (chat) — ~5 GB |
+| **16 GB** | `granite3.1-moe:3b` + `granite4:tiny-h` (actions), `gemma3:1b` (chat) — bigger, smarter planner |
+| **32 GB** | `granite3.1-moe:3b` + `granite4:small-h` (actions), `gemma3:1b` (chat) — the biggest planner |
+
+You can switch packages or add models later in Settings; if one is missing, Enclyra falls back to one you have.
 
 Only these files are downloaded — nothing about you is uploaded. If the internet drops during setup, just open
 Enclyra again and it carries on.
