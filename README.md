@@ -1,4 +1,4 @@
-# Enclyra for macOS — 0.9.0 beta
+# Enclyra for macOS — 0.9.1 beta
 
 **An AI that runs on your Mac, not in the cloud.** It talks with you, remembers you, and does real work on your
 computer — files, PDFs, videos, pictures, reminders, the web — on a small local model that fits in 8 GB of RAM.
