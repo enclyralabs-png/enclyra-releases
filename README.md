@@ -130,7 +130,7 @@ Nothing you say or do is sent anywhere. The only times Enclyra uses the internet
 
 | When | What is sent | Turn it off |
 |---|---|---|
-| App launch | update check, with a **random install number** (not your name, email or IP) so we can count how many people use Enclyra | Settings → uncheck automatic update checks |
+| App launch | update check, with an **anonymous number made from your Mac** — a one-way hash, so it can't identify you or be matched with anything else (not your name, email or IP); the same Mac always gives the same number, so we count Macs, not reinstalls | Settings → uncheck automatic update checks |
 | You ask for a web search or download | the search words | don't ask for one |
 | First launch, only if you choose it | your public IP to ip-api.com, to guess your city | choose "offline" or "skip" |
 | You press **Report issue** | the report you see and approve before it's sent | don't press it |
